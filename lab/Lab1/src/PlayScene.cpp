@@ -25,6 +25,12 @@ void PlayScene::draw()
 void PlayScene::update()
 {
 	updateDisplayList();
+	{
+		if (CollisionManager::squaredDistance(m_pPlaneSprite->getTransform()->position, m_pPlayer->getTransform()->position) < 2000) // distance betweem player and plane < 2000
+		{
+			TheGame::Instance().changeSceneState(END_SCENE);
+		}
+	}
 }
 
 void PlayScene::clean()
