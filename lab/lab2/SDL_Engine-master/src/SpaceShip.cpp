@@ -14,6 +14,7 @@ SpaceShip::SpaceShip()
 	getRigidBody()->velocity = glm::vec2(0, 0);
 	getRigidBody()->isColliding = false;
 
+	setIsCentered(true);
 	setType(SPACE_SHIP);
 }
 
@@ -27,7 +28,7 @@ void SpaceShip::draw()
 	const auto y = getTransform()->position.y;
 
 	// draw the SpaceShip
-	TextureManager::Instance().draw("space_ship", x, y, 0, 255, true);
+	TextureManager::Instance().draw("space_ship", x, y, 0, 255, isCentered());
 }
 
 void SpaceShip::update()
