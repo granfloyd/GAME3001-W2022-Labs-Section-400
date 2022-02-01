@@ -30,6 +30,7 @@ int main(int argc, char* args[])
 		frameTime = SDL_GetTicks() - frameStart;
 		if (frameTime < DELAY_TIME)
 		{
+			//game will wait until delay_time has elapsed
 			SDL_Delay(int(DELAY_TIME - frameTime));
 		}
 
