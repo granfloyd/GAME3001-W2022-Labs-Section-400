@@ -19,22 +19,27 @@ PlayScene::~PlayScene()
 void PlayScene::draw()
 {
 	drawDisplayList();
-	//draw target bounding box
-	//Util::DrawRect(m_pTarget->getTransform()->position - glm::vec2(m_pTarget->getWidth() *0.5f,m_pTarget->getHeight() * 0.5f)
-	//	, m_pTarget->getWidth(), m_pTarget->getHeight());
-	////draw spaceship bounding box
-	//Util::DrawCircle(m_pTarget->getTransform()->position, m_pTarget->getWidth() * 0.5f);
+	
+	if (m_bDebugView)
+	{
+		Util::DrawCircle(m_pTarget->getTransform()->position, m_pTarget->getWidth() * 0.5f);
 
-	//Util::DrawRect(m_pSpaceShip->getTransform()->position - glm::vec2(m_pSpaceShip->getWidth() * 0.5f, m_pSpaceShip->getHeight() * 0.5f)
-		//, m_pSpaceShip->getWidth(), m_pSpaceShip->getHeight());
+		if (m_pSpaceShip->isEnabled())
+		{
+			Util::DrawCircle(m_pSpaceShip->getTransform()->position, Util::max(m_pSpaceShip->getWidth() * 0.5f, m_pSpaceShip->getHeight() * 0.5f));
+		}
+	}
+	
+	
+	
 	SDL_SetRenderDrawColor(Renderer::Instance().getRenderer(), 255, 255, 255, 255);
 }
 
 void PlayScene::update()
 {
 	updateDisplayList();
-	//CollisionManager::AABBCheck(m_pTarget, m_pSpaceShip);
-	CollisionManager::circleAABBCheck(m_pTarget, m_pSpaceShip);
+	CollisionManager::squaredRadiusCheck(m_pSpaceShip, m_pTarget);
+	
 }
 
 void PlayScene::clean()
@@ -70,6 +75,8 @@ void PlayScene::start()
 {
 	// Set GUI Title
 	m_guiTitle = "Play Scene";
+	m_bDebugView = false;
+
 	m_pTarget = new Target();//instantuatung a new target object - allocating memory on the heap
 	
 	addChild(m_pTarget);
@@ -83,7 +90,7 @@ void PlayScene::start()
 	ImGuiWindowFrame::Instance().setGUIFunction(std::bind(&PlayScene::GUI_Function, this));
 }
 
-void PlayScene::GUI_Function() const
+void PlayScene::GUI_Function()
 {
 	// Always open with a NewFrame
 	ImGui::NewFrame();
@@ -93,7 +100,12 @@ void PlayScene::GUI_Function() const
 	
 	ImGui::Begin("lab2 debug properites", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
 
-
+	ImGui::Separator();
+	static bool toggleDebug = false;
+	if (ImGui::Checkbox("Toggle debug draw", &toggleDebug))
+	{
+		m_bDebugView = toggleDebug;
+	}
 
 	ImGui::Separator();
 
