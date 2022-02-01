@@ -36,7 +36,7 @@ void SpaceShip::draw()
 	const auto y = getTransform()->position.y;
 
 	// draw the SpaceShip
-	TextureManager::Instance().draw("space_ship", x, y, 0, 255, isCentered());
+	TextureManager::Instance().draw("space_ship", x, y, getCurrentHeading(), 255, isCentered());
 }
 
 void SpaceShip::update()
@@ -96,13 +96,27 @@ void SpaceShip::Seek()
 	//normilize the target direction
 	const glm::vec2 steering_direction = getDesiredVelocity() - getCurrentDirection();
 
-	setCurrentDirection(steering_direction);
+	LookWhereYoureGoing(steering_direction);
 
 	getRigidBody()->acceleration = getCurrentDirection() * getAccelerationRate();
 }
 
-void SpaceShip::LookWhereYoureGoing()
+void SpaceShip::LookWhereYoureGoing(const glm::vec2 target_direction)
 {
+	const float target_rotation = Util::signedAngle(getCurrentDirection(), target_direction);
+
+	const float turn_sensitivity = 5.0f;
+	if (abs(target_rotation) > turn_sensitivity)
+	{
+		if (target_rotation > 0.0f)
+		{
+			setCurrentHeading(getCurrentHeading() + getTurnRate());
+		}
+		else if (target_rotation < 0.0f)
+		{
+			setCurrentHeading(getCurrentHeading() - getTurnRate());
+		}
+	}
 }
 
 void SpaceShip::m_move()
