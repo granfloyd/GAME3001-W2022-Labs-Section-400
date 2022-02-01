@@ -111,7 +111,7 @@ void SpaceShip::m_move()
 	const glm::vec2 velocity_term = getRigidBody()->velocity *dt;
 
 	//compute the acceleration term
-	const glm::vec2 acceleration_term = getRigidBody()->acceleration * 0.5f *dt* dt;
+	const glm::vec2 acceleration_term = getRigidBody()->acceleration * 0.5f * dt;
 
 	//compute new position
 	glm::vec2 final_position = initial_position + velocity_term + acceleration_term;
