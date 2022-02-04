@@ -22,9 +22,9 @@ void PlayScene::draw()
 
 	if(m_bDebugView)
 	{
-		//Util::DrawRect(m_pTarget->getTransform()->position - glm::vec2(m_pTarget->getWidth() * 0.5f, m_pTarget->getHeight() * 0.5f), m_pTarget->getWidth(), m_pTarget->getHeight());
+		
 		Util::DrawCircle(m_pTarget->getTransform()->position, m_pTarget->getWidth() * 0.5f);
-
+		Util::DrawRect(m_pObstacle->getTransform()->position - glm::vec2(m_pObstacle->getWidth() * 0.5f, m_pObstacle->getHeight() * 0.5f), m_pObstacle->getWidth(), m_pObstacle->getHeight());
 		
 		if (m_pSpaceShip->isEnabled())
 		{
@@ -43,9 +43,9 @@ void PlayScene::update()
 
 	if(m_pSpaceShip->isEnabled())
 	{
-		//CollisionManager::squaredRadiusCheck(m_pSpaceShip, m_pTarget);
+		
 		CollisionManager::circleAABBCheck(m_pTarget, m_pSpaceShip);
-		//CollisionManager::AABBCheck(m_pTarget, m_pSpaceShip);
+		CollisionManager::AABBCheck( m_pSpaceShip,m_pObstacle);
 		CollisionManager::rotateAABB(m_pSpaceShip, m_pSpaceShip->getCurrentHeading());
 	}
 }
@@ -91,6 +91,12 @@ void PlayScene::start()
 	m_pSpaceShip->setEnabled(false);
 	addChild(m_pSpaceShip);
 
+	m_pObstacle = new Obstacle();
+	addChild(m_pObstacle);
+	//preload sounds
+	SoundManager::Instance().load("../Assets/audio/yay.ogg", "yay", SOUND_SFX);
+	SoundManager::Instance().load("../Assets/audio/thunder.ogg", "thunder", SOUND_SFX);
+
 	ImGuiWindowFrame::Instance().setGUIFunction(std::bind(&PlayScene::GUI_Function, this));
 }
 
@@ -121,6 +127,13 @@ void PlayScene::GUI_Function()
 	{
 		m_pTarget->getTransform()->position = glm::vec2(position[0], position[1]);
 		m_pSpaceShip->setTargetPosition(m_pTarget->getTransform()->position);
+	}
+	//obstacle 
+	static float obstacle[2] = { m_pObstacle->getTransform()->position.x, m_pObstacle->getTransform()->position.y };
+	if (ImGui::SliderFloat2("Obstacle Position", obstacle, 0.0f, 800.0f))
+	{
+		m_pObstacle->getTransform()->position = glm::vec2(obstacle[0], obstacle[1]);
+		
 	}
 
 	ImGui::Separator();

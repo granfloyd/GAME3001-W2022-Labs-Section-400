@@ -7,6 +7,8 @@
 #include "Target.h"
 #include "SpaceShip.h"
 
+#include "Obstacle.h"
+
 class PlayScene : public Scene
 {
 public:
@@ -29,6 +31,7 @@ private:
 	// Game Objects
 	Target* m_pTarget;
 	SpaceShip* m_pSpaceShip;
+	Obstacle* m_pObstacle;
 
 	// Debug bool
 	bool m_bDebugView;

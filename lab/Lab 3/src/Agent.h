@@ -24,6 +24,17 @@ public:
 	float getCurrentHeading() const;
 	glm::vec4 getLOSColour() const;
 
+
+	glm::vec2 getLeftLOSEndPoint()const;
+	glm::vec2 getMiddleLOSEndPoint()const;
+	glm::vec2 getRightLOSEndPoint()const;
+	bool* getCollisionWhiskers();//return the entire array
+	glm::vec4 getLineColour(int index);
+		float getWhiskersAngle()const;
+
+
+
+
 	// setters
 	void setTargetPosition(glm::vec2 new_position);
 	void setCurrentDirection(glm::vec2 new_direction);
@@ -31,6 +42,13 @@ public:
 	void setHasLOS(bool state);
 	void setCurrentHeading(float heading);
 	void setLOSColour(glm::vec4 colour);
+
+
+	glm::vec2 setLeftLOSEndPoint(glm::vec2 point);
+	glm::vec2 setMiddleLOSEndPoint(glm::vec2 point);
+	glm::vec2 setRightLOSEndPoint(glm::vec2 point);
+	glm::vec4 setLineColour(int index);
+	float setWhiskersAngle()const;
 
 private:
 	void m_changeDirection();
@@ -42,6 +60,12 @@ private:
 	float m_LOSDistance;
 	bool m_hasLOS;
 	glm::vec4 m_LOSColour;
+
+	glm::vec2 m_leftLOSEndPoint;
+	glm::vec2 m_middleLOSEndPoint;
+	glm::vec2 m_rightLOSEndPoint;
+	glm::vec4 m_lineColour[3];//change this to 5
+	bool m_collisionWhiskers[3];//contact list for each whisker change to 5
 };
 
 
