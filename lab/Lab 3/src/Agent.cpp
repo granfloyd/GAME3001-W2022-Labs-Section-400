@@ -46,6 +46,31 @@ glm::vec2 Agent::getLeftLOSEndPoint() const
 	return glm::vec2();
 }
 
+glm::vec2 Agent::getMiddleLOSEndPoint() const
+{
+	return glm::vec2();
+}
+
+glm::vec2 Agent::getRightLOSEndPoint() const
+{
+	return glm::vec2();
+}
+
+bool* Agent::getCollisionWhiskers()
+{
+	return nullptr;
+}
+
+glm::vec4 Agent::getLineColour(int index)
+{
+	return glm::vec4();
+}
+
+float Agent::getWhiskersAngle() const
+{
+	return 0.0f;
+}
+
 void Agent::setTargetPosition(const glm::vec2 new_position)
 {
 	m_targetPosition = new_position;
@@ -91,6 +116,18 @@ glm::vec2 Agent::setMiddleLOSEndPoint(glm::vec2 point)
 glm::vec2 Agent::setRightLOSEndPoint(glm::vec2 point)
 {
 	return glm::vec2();
+}
+
+void Agent::setLineColour(int index, glm::vec4 colour)
+{
+}
+
+void Agent::setWhiskersAngle(float angle)
+{
+}
+
+void Agent::updateWhiskers(float angle)
+{
 }
 
 glm::vec4 Agent::setLineColour(int index)
