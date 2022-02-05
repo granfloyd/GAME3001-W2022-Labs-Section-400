@@ -10,6 +10,8 @@ Agent::Agent()
 	m_lineColour[0] = glm::vec4(0, 1, 0, 1);//left line colour
 	m_lineColour[1] = glm::vec4(0, 1, 0, 1);//mid line color
 	m_lineColour[2] = glm::vec4(0, 1, 0, 1);//right line color
+	m_lineColour[3] = glm::vec4(0, 1, 0, 1);//right line color
+	m_lineColour[4] = glm::vec4(0, 1, 0, 1);//right line color
 	//int whisker collision
 	m_collisionWhiskers[0] = false;
 	m_collisionWhiskers[1] = false;
@@ -67,6 +69,14 @@ glm::vec2 Agent::getRightLOSEndPoint() const
 {
 	return m_rightLOSEndPoint;
 }
+glm::vec2 Agent::getLeftzLOSEndPoint() const
+{
+	return m_leftzLOSEndPoint;
+}
+glm::vec2 Agent::getRightzLOSEndPoint() const
+{
+	return m_rightzLOSEndPoint;
+}
 
 bool* Agent::getCollisionWhiskers()
 {
@@ -97,6 +107,14 @@ void Agent::setRightLOSEndPoint(const glm::vec2 point)
 {
 	m_rightLOSEndPoint = point;
 }
+void Agent::setLeftzLOSEndPoint(const glm::vec2 point)
+{
+	m_leftzLOSEndPoint = point;
+}
+void Agent::setRightzLOSEndPoint(const glm::vec2 point)
+{
+	m_rightzLOSEndPoint = point;
+}
 
 void Agent::setLineColour(const int index,const glm::vec4 colour)
 {
@@ -120,9 +138,18 @@ void Agent::updateWhiskers(const float angle)
 	setLeftLOSEndPoint(getTransform()->position + glm::vec2(x,-y) * getLOSDistance() * 0.75f);
 
 	//right whisker
-     x = sin((getCurrentHeading() + m_whiskerAngle + 90) * Util::Deg2Rad);
+	 x = sin((getCurrentHeading() + m_whiskerAngle + 90) * Util::Deg2Rad);
 	 y = cos((getCurrentHeading() + m_whiskerAngle + 90) * Util::Deg2Rad);
 	setRightLOSEndPoint(getTransform()->position + glm::vec2(x, -y) * getLOSDistance() * 0.75f);
+	//leftz
+	 x = sin((getCurrentHeading() - m_whiskerAngle + 75) * Util::Deg2Rad);
+	 y = cos((getCurrentHeading() - m_whiskerAngle + 75) * Util::Deg2Rad);
+	setLeftzLOSEndPoint(getTransform()->position + glm::vec2(x, -y) * getLOSDistance() * 0.75f);
+
+	//rightz
+	 x = sin((getCurrentHeading() + m_whiskerAngle + 75) * Util::Deg2Rad);
+	 y = cos((getCurrentHeading() + m_whiskerAngle + 75) * Util::Deg2Rad);
+	setRightzLOSEndPoint(getTransform()->position + glm::vec2(x, -y) * getLOSDistance() * 0.75f);
 }
 
 
