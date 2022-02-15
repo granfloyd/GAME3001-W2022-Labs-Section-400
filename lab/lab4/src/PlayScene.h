@@ -46,8 +46,7 @@ private:
 	Tile* m_getTile(glm::vec2 grid_position);
 
 
-	// Debug bool
-	bool m_bDebugView;
+	
 };
 
 #endif /* defined (__PLAY_SCENE__) */
