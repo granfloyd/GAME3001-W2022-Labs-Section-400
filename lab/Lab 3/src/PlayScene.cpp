@@ -183,7 +183,7 @@ void PlayScene::GUI_Function()
 
 	static float speed = m_pSpaceShip->getMaxSpeed();
 	if(ImGui::SliderFloat("Max Speed", &speed, 0.0f, 100.0f))
-	{
+	{ 
 		m_pSpaceShip->setMaxSpeed(speed);
 	}
 

@@ -104,7 +104,7 @@ void SpaceShip::LookWhereYoureGoing(const glm::vec2 target_direction)
 	float target_rotation = Util::signedAngle(getCurrentDirection(), target_direction) - 90;
 
 	const float turn_sensitivity = 3.0f;
-	//55mins in vid 
+	 
 	if (getCollisionWhiskers()[0])//if left whisker is colliding
 	{
 		target_rotation += getTurnRate() * turn_sensitivity;//turn towards right
@@ -120,6 +120,17 @@ void SpaceShip::LookWhereYoureGoing(const glm::vec2 target_direction)
 	if (getCollisionWhiskers()[4])//if rightz whisker
 	{
 		target_rotation -= getTurnRate() * turn_sensitivity;//turn towards left
+	}
+	else if (abs(target_rotation) > turn_sensitivity)
+	{
+		if (target_rotation > 0.0f)
+		{
+			setCurrentHeading(getCurrentHeading() + getTurnRate());
+		}
+		else if (target_rotation < 0.0f)
+		{
+			setCurrentHeading(getCurrentHeading() - getTurnRate());
+		}
 	}
 	//smoothing function that changes the heading of the spaceship slowly to align with the target
 	setCurrentHeading(Util::lerpUnclamped(getCurrentHeading(), getCurrentHeading() + target_rotation,
