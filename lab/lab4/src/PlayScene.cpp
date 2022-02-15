@@ -7,6 +7,7 @@
 #include "imgui_sdl.h"
 #include "Renderer.h"
 #include "Util.h"
+#include "Config.h"
 
 PlayScene::PlayScene()
 {
@@ -59,17 +60,67 @@ void PlayScene::start()
 	m_guiTitle = "Play Scene";
 	m_bDebugView = false;
 
+	m_buildGrid();
+
 	m_pTarget = new Target(); // instantiating a new Target object - allocating memory on the Heap
 	addChild(m_pTarget);
 
 	m_pSpaceShip = new SpaceShip();	
 	addChild(m_pSpaceShip);
 
+	
+
 	//preload sounds
 	SoundManager::Instance().load("../Assets/audio/yay.ogg", "yay", SOUND_SFX);
 	SoundManager::Instance().load("../Assets/audio/thunder.ogg", "thunder", SOUND_SFX);
 
 	ImGuiWindowFrame::Instance().setGUIFunction(std::bind(&PlayScene::GUI_Function, this));
+}
+void PlayScene::m_buildGrid()
+{
+	const auto tile_size = Config::TILE_SIZE;
+	for (int row = 0; row < Config::ROW_NUM; ++row)
+	{
+		for (int col = 0; col < Config::COL_NUM;++col)
+		{
+			Tile* tile = new Tile();
+	        tile->getTransform()->position = glm::vec2(col * tile_size,row * tile_size);//world position
+			tile->setGridPosition(col, row);//grid position
+	        tile->setParent(this);
+	        tile->addLabels();
+	        addChild(tile);
+	        tile->setEnabled(false);
+			m_pGrid.push_back(tile);
+		}
+	}
+}
+
+bool PlayScene::m_getGridEnabled() const
+{
+	return m_isGridEnabled;
+}
+
+void PlayScene::m_setGridEnabled(const bool state)
+{
+	m_isGridEnabled = state;
+	for (auto tile : m_pGrid)
+	{
+		tile->setEnabled(m_isGridEnabled);//enable each tile object
+		tile->setLabelsEnabled(m_isGridEnabled);//enable corresponding labels
+	}
+}
+
+Tile* PlayScene::m_getTile(const int col, const int row)
+{
+	return m_pGrid[(row * Config::COL_NUM) + col];
+}
+
+Tile* PlayScene::m_getTile(const glm::vec2 grid_position)
+{
+	const auto col = grid_position.x;
+	const auto row = grid_position.y;
+
+	return m_getTile(col,row);
 }
 
 void PlayScene::GUI_Function()
@@ -107,3 +158,5 @@ void PlayScene::GUI_Function()
 	}	
 	ImGui::End();
 }
+
+
