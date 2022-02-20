@@ -62,6 +62,7 @@ void PlayScene::start()
 
 	m_buildGrid();
 	auto offset = glm::vec2(Config::TILE_SIZE * 0.5f, Config::TILE_SIZE * 0.5f);
+	m_currentHeuristic = MANHATTAN;
 	m_pTarget = new Target(); // instantiating a new Target object - allocating memory on the Heap
 	m_pTarget->getTransform()->position = m_getTile(15, 11)->getTransform()->position + offset;
 	m_pTarget->setGridPosition(15.0f, 11.0f);
@@ -79,6 +80,8 @@ void PlayScene::start()
 	//preload sounds
 	SoundManager::Instance().load("../Assets/audio/yay.ogg", "yay", SOUND_SFX);
 	SoundManager::Instance().load("../Assets/audio/thunder.ogg", "thunder", SOUND_SFX);
+
+	m_computeTileCost();
 
 	ImGuiWindowFrame::Instance().setGUIFunction(std::bind(&PlayScene::GUI_Function, this));
 }
@@ -114,7 +117,7 @@ void PlayScene::m_buildGrid()
 			}
 			else
 			{
-				tile->setNeighbourTile(TOP_TILE, m_getTile(col,row -1));
+				tile->setNeighbourTile(TOP_TILE, m_getTile(col,row - 1));
 			}
 
 			//right neighbour
@@ -124,16 +127,16 @@ void PlayScene::m_buildGrid()
 			}
 			else
 			{
-				tile->setNeighbourTile(RIGHT_TILE, m_getTile(col +1 , row));
+				tile->setNeighbourTile(RIGHT_TILE, m_getTile(col + 1 , row));
 			}
 			//bottom neighbour
-			if (row == Config::COL_NUM - 1)
+			if (row == Config::ROW_NUM - 1)
 			{
 				tile->setNeighbourTile(BOTTOM_TILE, nullptr);
 			}
 			else
 			{
-				tile->setNeighbourTile(BOTTOM_TILE, m_getTile(col,row+1));
+				tile->setNeighbourTile(BOTTOM_TILE, m_getTile(col,row + 1));
 			}
 			//leftymost neighbour
 			if (col == 0)
@@ -142,7 +145,7 @@ void PlayScene::m_buildGrid()
 			}
 			else
 			{
-				tile->setNeighbourTile(LEFT_TILE, m_getTile(col-1,row));
+				tile->setNeighbourTile(LEFT_TILE, m_getTile(col - 1,row));
 			}
 		}
 	}
@@ -165,6 +168,29 @@ void PlayScene::m_setGridEnabled(const bool state)
 
 void PlayScene::m_computeTileCost()
 {
+	float distance = 0.0f;
+	float dx = 0.0f;
+	float dy = 0.0f;
+	//for each tile in ther grid loop[
+	for (auto tile : m_pGrid)
+	{
+		//compute the distance from each tile to the goal tile
+		switch (m_currentHeuristic)
+		{
+		case MANHATTAN:
+			dx = abs(tile->getGridPosition().x - m_pTarget->getGridPosition().x);
+			dx = abs(tile->getGridPosition().y - m_pTarget->getGridPosition().y);
+			distance = dx + dy;
+			break;
+		case EUCLIDEAN:
+			//compute the ___ disrance for each tile
+			
+			distance = Util::distance(tile->getGridPosition(), m_pTarget->getGridPosition());
+			break;
+		}
+		tile->setTileCost(distance);
+	}
+
 }
 
 Tile* PlayScene::m_getTile(const int col, const int row)
