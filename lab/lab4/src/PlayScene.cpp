@@ -99,6 +99,53 @@ void PlayScene::m_buildGrid()
 			m_pGrid.push_back(tile);
 		}
 	}
+	//set the neighbour ref for each tile in the grid
+	//tile = node in graph
+
+	for (int row = 0; row < Config::ROW_NUM; ++row)
+	{
+		for (int col = 0; col < Config::COL_NUM;++col)
+		{
+			Tile* tile = m_getTile(col, row);
+			//top neighbour
+			if (row == 0)
+			{
+				tile->setNeighbourTile(TOP_TILE, nullptr);
+			}
+			else
+			{
+				tile->setNeighbourTile(TOP_TILE, m_getTile(col,row -1));
+			}
+
+			//right neighbour
+			if (col == Config::COL_NUM - 1)
+			{
+				tile->setNeighbourTile(RIGHT_TILE, nullptr);
+			}
+			else
+			{
+				tile->setNeighbourTile(RIGHT_TILE, m_getTile(col +1 , row));
+			}
+			//bottom neighbour
+			if (row == Config::COL_NUM - 1)
+			{
+				tile->setNeighbourTile(BOTTOM_TILE, nullptr);
+			}
+			else
+			{
+				tile->setNeighbourTile(BOTTOM_TILE, m_getTile(col,row+1));
+			}
+			//leftymost neighbour
+			if (col == 0)
+			{
+				tile->setNeighbourTile(LEFT_TILE, nullptr);
+			}
+			else
+			{
+				tile->setNeighbourTile(LEFT_TILE, m_getTile(col-1,row));
+			}
+		}
+	}
 }
 
 bool PlayScene::m_getGridEnabled() const
@@ -167,6 +214,7 @@ void PlayScene::GUI_Function()
 		m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(UNVISITED);
 		m_pSpaceShip->getTransform()->position = m_getTile(start_position[0], start_position[1])->getTransform()->position + offset;
 		m_pSpaceShip->setGridPosition(start_position[0], start_position[1]);//records grid position
+		m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(START);
 	}
 	// target properties
 	static int goal_position[2] = { m_pTarget->getGridPosition().x, m_pTarget->getGridPosition().y };
@@ -179,6 +227,7 @@ void PlayScene::GUI_Function()
 		m_getTile(m_pTarget->getGridPosition())->setTileStatus(UNVISITED);
 		m_pTarget->getTransform()->position = m_getTile(goal_position[0], goal_position[1])->getTransform()->position + offset;
 		m_pTarget->setGridPosition(start_position[0], start_position[1]);//records grid position
+		m_getTile(m_pTarget->getGridPosition())->setTileStatus(GOAL);
 	}	
 	ImGui::End();
 }

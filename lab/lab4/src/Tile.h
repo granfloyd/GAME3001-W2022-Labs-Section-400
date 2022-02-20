@@ -20,8 +20,8 @@ public:
 	void update()override;
 	void clean()override;
 	//getters and setters(accessors and mutators)
-	Tile* getNegibourTile(NeighbourTile position);
-	void setNegibourTile(NeighbourTile position,Tile* tile);
+	Tile* getNeighbourTile(NeighbourTile position);
+	void setNeighbourTile(NeighbourTile position,Tile* tile);
 
 	float getTileCost()const;
 	void setTileCost(float const);

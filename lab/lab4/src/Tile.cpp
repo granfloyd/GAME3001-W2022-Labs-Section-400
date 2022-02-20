@@ -37,12 +37,12 @@ void Tile::clean()
 {
 }
 
-Tile* Tile::getNegibourTile(const NeighbourTile position)
+Tile* Tile::getNeighbourTile(const NeighbourTile position)
 {
 	return m_neighbours[position];
 }
 
-void Tile::setNegibourTile(const NeighbourTile position, Tile* tile)
+void Tile::setNeighbourTile(const NeighbourTile position, Tile* tile)
 {
 	m_neighbours[position] = tile;
 }
