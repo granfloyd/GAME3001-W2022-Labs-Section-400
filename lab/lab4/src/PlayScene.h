@@ -6,7 +6,7 @@
 #include "Tile.h"
 #include "Target.h"
 #include "SpaceShip.h"
-
+#include "Heuristic.h"
 
 class PlayScene : public Scene
 {
@@ -40,11 +40,13 @@ private:
 	void m_buildGrid();
 	bool m_getGridEnabled()const;
 	void m_setGridEnabled(bool state);
+	void m_computeTileCost();
 
 	//convenience func to convert world to grid space
 	Tile* m_getTile(int col, int row);
 	Tile* m_getTile(glm::vec2 grid_position);
-
+//heuristic
+	Heuristic m_currentHeuristic;
 
 	
 };
