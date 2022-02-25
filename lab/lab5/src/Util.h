@@ -52,6 +52,11 @@ public:
 	static float dot(glm::vec2 lhs, glm::vec2 rhs);
 	static float signedAngle(glm::vec2 from, glm::vec2 to);
 
+	static float angleToTarget(float dy, float dx);
+	static float degreesToTarget(float dy, float dx);
+	static float angle180(float a);
+	static float angle360(float a);
+
 	static glm::vec2 rotatePoint(glm::vec2 point, float angle, glm::vec2 pivot);
 
 	// debugging convenience functions

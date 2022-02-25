@@ -2,11 +2,12 @@
 #ifndef __PLAY_SCENE__
 #define __PLAY_SCENE__
 
+#include "Heuristic.h"
 #include "Scene.h"
-#include "Tile.h"
+//#include "Obstacle.h"
 #include "Target.h"
 #include "SpaceShip.h"
-#include "Heuristic.h"
+#include "Tile.h"
 
 class PlayScene : public Scene
 {
@@ -30,25 +31,28 @@ private:
 	// Game Objects
 	Target* m_pTarget;
 	SpaceShip* m_pSpaceShip;
-	
-	//testtile
-	/*Tile* m_pTile;*/
-	//pathfinding
-	std::vector<Tile*>m_pGrid;
+	//Obstacle* m_pObstacle;
+
+	//Pathfinding objects and functions
+	std::vector<Tile*> m_pGrid;
 	bool m_isGridEnabled;
 
 	void m_buildGrid();
-	bool m_getGridEnabled()const;
 	void m_setGridEnabled(bool state);
-	void m_computeTileCost();
+	bool m_getGridEnabled() const;
+	void m_computeTileCosts();
 
-	//convenience func to convert world to grid space
+	//Convenience functions
 	Tile* m_getTile(int col, int row);
 	Tile* m_getTile(glm::vec2 grid_position);
-//heuristic
+
+	//Heuristic
 	Heuristic m_currentHeuristic;
 
-	
+	// Debug bool
+	//bool m_bDebugView;
+
+	//void doWhiskerCollision();
 };
 
 #endif /* defined (__PLAY_SCENE__) */

@@ -311,6 +311,34 @@ float Util::signedAngle(const glm::vec2 from, const glm::vec2 to)
 	return unsigned_angle * sign;
 }
 
+float Util::angleToTarget(float dy, float dx)
+{
+	return (float)atan2(dy, dx); // In radians.
+}
+
+float Util::degreesToTarget(float dy, float dx)
+{
+	return (float)(atan2(dy, dx) * Rad2Deg) - 90; // In radians.
+}
+
+float Util::angle180(float a)
+{
+	// Constrains an angle between -180 and 180.
+	a = fmod(a + 180.0, 360.0);
+	if (a < 0)
+		a += 360.0;
+	return a - 180.0;
+}
+
+float Util::angle360(float a)
+{
+	// Constrains an angle between 0 and 360.
+	a = fmod(a, 360.0);
+	if (a < 0)
+		a += 360.0;
+	return a;
+}
+
 glm::vec2 Util::rotatePoint(glm::vec2 point, const float angle, const glm::vec2 pivot)
 {
 	const float s = sin(angle * Deg2Rad);
