@@ -42,6 +42,18 @@ private:
 	bool m_getGridEnabled() const;
 	void m_computeTileCosts();
 
+	///calculate the shortest path
+	void m_findShortestPath();
+	void m_displayPathList();
+	void m_resetPathFinding();
+	void m_resetSimulation();
+
+	///tile lists for pathfinding
+	std::vector<Tile*> m_pOpenList;
+	std::vector<Tile*> m_pClosedList;
+	std::vector<Tile*> m_pPathList;
+
+
 	//Convenience functions
 	Tile* m_getTile(int col, int row);
 	Tile* m_getTile(glm::vec2 grid_position);
@@ -49,10 +61,14 @@ private:
 	//Heuristic
 	Heuristic m_currentHeuristic;
 
-	// Debug bool
-	//bool m_bDebugView;
+	//ship movement
+	int m_moveCounter = 0;
+	bool m_shipIsMoving = false;
+	void m_moveShip();
 
-	//void doWhiskerCollision();
+
+	static int start_position[2];
+	static int goal_position[2];
 };
 
 #endif /* defined (__PLAY_SCENE__) */

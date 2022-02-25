@@ -96,89 +96,10 @@ void PlayScene::start()
 	ImGuiWindowFrame::Instance().setGUIFunction(std::bind(&PlayScene::GUI_Function, this));
 }
 
-void PlayScene::GUI_Function()
-{
-	auto offset = glm::vec2(Config::TILE_SIZE * 0.5f, Config::TILE_SIZE * 0.5f);
-
-	// Always open with a NewFrame
-	ImGui::NewFrame();
-
-	// See examples by uncommenting the following - also look at imgui_demo.cpp in the IMGUI filter
-	//ImGui::ShowDemoWindow();
-	
-	ImGui::Begin("Lab 3 Debug Properties", NULL,
-		ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | 
-		ImGuiWindowFlags_NoMove);
-
-	ImGui::Separator();
-
-	/*static bool toggleSeek = m_pSpaceShip->isEnabled();
-	if (ImGui::Checkbox("Toggle Seek", &toggleSeek))
-	{
-		m_pSpaceShip->setEnabled(toggleSeek);
-	}*/
-
-	static bool toggleGrid = false;
-	if (ImGui::Checkbox("Toggle Grid", &toggleGrid))
-	{
-		m_isGridEnabled = toggleGrid;
-		m_setGridEnabled(m_isGridEnabled);
-	}
-
-	ImGui::Separator();
-
-	static int radio = static_cast<int>(m_currentHeuristic);
-	ImGui::Text("Heuristic Type");
-	ImGui::RadioButton("Manhattan", &radio, static_cast<int>(MANHATTAN));
-	ImGui::SameLine();
-	ImGui::RadioButton("Euclidean", &radio, static_cast<int>(EUCLIDEAN));
-
-	if (m_currentHeuristic != static_cast<Heuristic>(radio))
-	{
-		m_currentHeuristic = static_cast<Heuristic>(radio);
-		m_computeTileCosts();
-	}
-
-	ImGui::Separator();
-
-	// grid position properties
-	static int start_position[2] = { m_pSpaceShip->getGridPosition().x, m_pSpaceShip->getGridPosition().y };
-	if (ImGui::SliderInt2("Start Position", start_position, 0, Config::COL_NUM - 1))
-	{
-		if (start_position[1] > Config::ROW_NUM - 1)
-		{
-			start_position[1] = Config::ROW_NUM - 1;
-		}
-
-		m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(UNVISITED);
-		m_pSpaceShip->getTransform()->position = m_getTile(start_position[0],
-			start_position[1])->getTransform()->position + offset;
-		m_pSpaceShip->setGridPosition(start_position[0], start_position[1]);
-		m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(START);
-	}
-
-	static int goal_position[2] = { m_pTarget->getGridPosition().x, m_pTarget->getGridPosition().y };
-	if (ImGui::SliderInt2("Goal Position", goal_position, 0, Config::COL_NUM - 1))
-	{
-		if (goal_position[1] > Config::ROW_NUM - 1)
-		{
-			goal_position[1] = Config::ROW_NUM - 1;
-		}
-		m_getTile(m_pTarget->getGridPosition())->setTileStatus(UNVISITED);
-		m_pTarget->getTransform()->position = m_getTile(goal_position[0],
-			goal_position[1])->getTransform()->position + offset;
-		m_pTarget->setGridPosition(goal_position[0], goal_position[1]);
-		m_getTile(m_pTarget->getGridPosition())->setTileStatus(GOAL);
-		m_computeTileCosts();
-	}
-	
-	ImGui::End();
-}
-
 void PlayScene::m_buildGrid()
 {
 	auto tileSize = Config::TILE_SIZE;
-	
+
 	//add tiles to the grid 
 	for (int row = 0; row < Config::ROW_NUM; ++row)
 	{
@@ -217,7 +138,7 @@ void PlayScene::m_buildGrid()
 			}
 			else
 			{
-				tile->setNeighbourTile(RIGHT_TILE, m_getTile(col + 1, row ));
+				tile->setNeighbourTile(RIGHT_TILE, m_getTile(col + 1, row));
 			}
 			//If at bottommost row
 			if (row == Config::ROW_NUM - 1)
@@ -281,6 +202,22 @@ void PlayScene::m_computeTileCosts()
 	}
 }
 
+void PlayScene::m_findShortestPath()
+{
+}
+
+void PlayScene::m_displayPathList()
+{
+}
+
+void PlayScene::m_resetPathFinding()
+{
+}
+
+void PlayScene::m_resetSimulation()
+{
+}
+
 Tile* PlayScene::m_getTile(int col, int row)
 {
 	return m_pGrid[(row * Config::COL_NUM) + col];
@@ -294,30 +231,87 @@ Tile* PlayScene::m_getTile(glm::vec2 grid_position)
 	return m_pGrid[(row * Config::COL_NUM) + col];
 }
 
-//void PlayScene::doWhiskerCollision()
-//{
-//	SDL_Rect box = { (int)m_pObstacle->getTransform()->position.x - m_pObstacle->getWidth() * 0.5f,
-//		(int)m_pObstacle->getTransform()->position.y - m_pObstacle->getHeight() * 0.5f,
-//		(int)m_pObstacle->getWidth(), (int)m_pObstacle->getHeight() };
-//
-//	SDL_Point ship_origin = { (int)m_pSpaceShip->getTransform()->position.x, (int)m_pSpaceShip->getTransform()->position.y };
-//	// End points for whiskers:
-//	SDL_Point left = { (int)m_pSpaceShip->getLeftLOSEndPoint().x, (int)m_pSpaceShip->getLeftLOSEndPoint().y };
-//	SDL_Point middle = { (int)m_pSpaceShip->getMiddleLOSEndPoint().x, (int)m_pSpaceShip->getMiddleLOSEndPoint().y };
-//	SDL_Point right = { (int)m_pSpaceShip->getRightLOSEndPoint().x, (int)m_pSpaceShip->getRightLOSEndPoint().y };
-//
-//	bool collisions[3] = { 0,0,0 }; // Refactoring: use getCollisionWhiskers from SpaceShip.
-//
-//	SDL_Point ship = ship_origin; // Something really annoying in the SDL method is that the lines get clipped, so we need to reset the lines.
-//	collisions[0] = SDL_IntersectRectAndLine(&box, &ship.x, &ship.y, &left.x, &left.y);
-//	ship = ship_origin;
-//	collisions[1] = SDL_IntersectRectAndLine(&box, &ship.x, &ship.y, &middle.x, &middle.y);
-//	ship = ship_origin;
-//	collisions[2] = SDL_IntersectRectAndLine(&box, &ship.x, &ship.y, &right.x, &right.y);
-//
-//	for (unsigned int i = 0; i < 3; i++)
-//	{
-//		m_pSpaceShip->getCollisionWhiskers()[i] = collisions[i];
-//		m_pSpaceShip->setLineColor(i, (collisions[i] ? glm::vec4(1, 0, 0, 1) : glm::vec4(0, 1, 0, 1)));
-//	}
-//}
+void PlayScene::m_moveShip()
+{
+}
+
+void PlayScene::GUI_Function()
+{
+	auto offset = glm::vec2(Config::TILE_SIZE * 0.5f, Config::TILE_SIZE * 0.5f);
+
+	// Always open with a NewFrame
+	ImGui::NewFrame();
+
+	// See examples by uncommenting the following - also look at imgui_demo.cpp in the IMGUI filter
+	//ImGui::ShowDemoWindow();
+	
+	ImGui::Begin("Lab 3 Debug Properties", NULL,
+		ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | 
+		ImGuiWindowFlags_NoMove);
+
+	ImGui::Separator();
+
+
+	static bool toggleGrid = false;
+	if (ImGui::Checkbox("Toggle Grid", &toggleGrid))
+	{
+		m_isGridEnabled = toggleGrid;
+		m_setGridEnabled(m_isGridEnabled);
+	}
+
+	ImGui::Separator();
+
+	static int radio = static_cast<int>(m_currentHeuristic);
+	ImGui::Text("Heuristic Type");
+	ImGui::RadioButton("Manhattan", &radio, static_cast<int>(MANHATTAN));
+	ImGui::SameLine();
+	ImGui::RadioButton("Euclidean", &radio, static_cast<int>(EUCLIDEAN));
+
+	if (m_currentHeuristic != static_cast<Heuristic>(radio))
+	{
+		m_currentHeuristic = static_cast<Heuristic>(radio);
+		m_computeTileCosts();
+	}
+
+	ImGui::Separator();
+
+	//spaceship prop
+	start_position[0] = m_pSpaceShip->getGridPosition().x;
+	start_position[1] = m_pSpaceShip->getGridPosition().y;
+	if (ImGui::SliderInt2("Start Position", start_position, 0, Config::COL_NUM - 1))
+	{
+		if (start_position[1] > Config::ROW_NUM - 1)
+		{
+			start_position[1] = Config::ROW_NUM - 1;
+		}
+
+		m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(UNVISITED);
+		m_pSpaceShip->getTransform()->position = m_getTile(start_position[0],
+			start_position[1])->getTransform()->position + offset;
+		m_pSpaceShip->setGridPosition(start_position[0], start_position[1]);
+		m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(START);
+	}
+	//target prop
+	goal_position[0] = m_pTarget->getGridPosition().x;
+    goal_position[1] = m_pTarget->getGridPosition().y;
+	if (ImGui::SliderInt2("Goal Position", goal_position, 0, Config::COL_NUM - 1))
+	{
+		if (goal_position[1] > Config::ROW_NUM - 1)
+		{
+			goal_position[1] = Config::ROW_NUM - 1;
+		}
+		m_getTile(m_pTarget->getGridPosition())->setTileStatus(UNVISITED);
+		m_pTarget->getTransform()->position = m_getTile(goal_position[0],
+			goal_position[1])->getTransform()->position + offset;
+		m_pTarget->setGridPosition(goal_position[0], goal_position[1]);
+		m_getTile(m_pTarget->getGridPosition())->setTileStatus(GOAL);
+		m_computeTileCosts();
+	}
+	
+	ImGui::End();
+}
+//for reset
+int PlayScene::start_position[2];
+int PlayScene::goal_position[2];
+
+
