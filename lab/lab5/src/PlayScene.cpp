@@ -101,9 +101,9 @@ void PlayScene::m_buildGrid()
 		for (int col = 0; col < Config::COL_NUM; ++col)
 		{
 			Tile* tile = new Tile(); //Creates a new empty tile
-			tile->getTransform()->position = glm::vec2(col * tileSize, row *
-				tileSize); //world position
+			tile->getTransform()->position = glm::vec2(col * tileSize, row * tileSize); //world position
 			tile->setGridPosition(col, row);
+			tile->setParent(this);
 			addChild(tile);
 			tile->addLabels();
 			tile->setEnabled(false);
@@ -282,6 +282,11 @@ void PlayScene::m_findShortestPath()
 
 void PlayScene::m_displayPathList()
 {
+	for (auto tile : m_pPathList)
+	{
+		std::cout << "(" << tile->getGridPosition().x << ", " << tile->getGridPosition().y << ")" << std::endl;
+	}
+	std::cout << "PAth length: " << m_pPathList.size() << std::endl;
 }
 
 void PlayScene::m_resetPathFinding()
@@ -348,6 +353,31 @@ void PlayScene::GUI_Function()
 	}
 
 	ImGui::Separator();
+
+	if (ImGui::Button("find shortest path"))
+	{
+		m_findShortestPath();
+	}
+	ImGui::Separator();
+	if (ImGui::Button("Start"))
+	{
+		if (!m_shipIsMoving)
+		{
+			m_shipIsMoving = true;
+		}
+	}
+
+	ImGui::SameLine();
+	if (ImGui::Button("reset pathfinding"))
+	{
+		m_resetPathFinding();
+	}
+
+	ImGui::SameLine();
+	if (ImGui::Button("reset simulation"))
+	{
+		m_resetSimulation();
+	}
 
 	//spaceship prop
 	start_position[0] = m_pSpaceShip->getGridPosition().x;
