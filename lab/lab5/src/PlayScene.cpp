@@ -82,6 +82,10 @@ void PlayScene::start()
 
 	//m_pObstacle = new Obstacle();
 	//addChild(m_pObstacle);
+	//impassable tiles 
+	//add function here that sets up impassble tiles
+	//e.g
+	//m_gettile(4,3)->settilestatus(impassable)
 
 	SoundManager::Instance().load("../Assets/audio/yay.ogg", "yay", SOUND_SFX);
 	SoundManager::Instance().load("../Assets/audio/thunder.ogg", "boom", SOUND_SFX);
