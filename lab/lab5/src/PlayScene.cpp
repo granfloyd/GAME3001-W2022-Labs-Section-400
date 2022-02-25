@@ -321,6 +321,25 @@ void PlayScene::m_resetPathFinding()
 
 void PlayScene::m_resetSimulation()
 {
+	auto offset = glm::vec2(Config::TILE_SIZE * 0.5f, Config::TILE_SIZE * 0.5f);
+	m_resetPathFinding();
+	//clear the current status of ship and target tiles 
+	m_getTile(m_pTarget->getGridPosition())->setTileStatus(UNVISITED);
+	m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(UNVISITED);
+
+	m_pTarget->getTransform()->position = m_getTile(15, 11)->getTransform()->position + offset;
+	m_pTarget->setGridPosition(15.0f, 11.0f);
+	m_getTile(15, 11)->setTileStatus(GOAL);	
+	goal_position[0] = m_pTarget->getGridPosition().x;
+	goal_position[1] = m_pTarget->getGridPosition().y;
+	
+	m_pSpaceShip->getTransform()->position = m_getTile(1, 3)->getTransform()->position + offset;
+	m_pSpaceShip->setGridPosition(1.0f, 3.0f);
+	m_getTile(1, 3)->setTileStatus(START);
+	start_position[0] = m_pSpaceShip->getGridPosition().x;
+	start_position[1] = m_pSpaceShip->getGridPosition().y;
+
+
 }
 void PlayScene::m_moveShip()
 {
