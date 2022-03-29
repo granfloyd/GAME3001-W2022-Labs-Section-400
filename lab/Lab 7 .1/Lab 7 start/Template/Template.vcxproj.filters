@@ -37,9 +37,6 @@
     <Filter Include="Scenes\Decision">
       <UniqueIdentifier>{3504f43a-6c77-42df-b71e-74147ab4e67d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Scenes\Decision\Action">
-      <UniqueIdentifier>{2f39c437-0eff-4a51-9644-5018e3f83850}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Scenes\Decision\Agents">
       <UniqueIdentifier>{587fea99-6c84-42cd-8e6d-1ec4d2d21747}</UniqueIdentifier>
     </Filter>
@@ -48,6 +45,9 @@
     </Filter>
     <Filter Include="Scenes\Decision\Core">
       <UniqueIdentifier>{b706852b-2d27-4d43-a616-49fcc83d3088}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Decision\Actions">
+      <UniqueIdentifier>{2f39c437-0eff-4a51-9644-5018e3f83850}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +167,9 @@
     </ClCompile>
     <ClCompile Include="..\src\Agent.cpp">
       <Filter>Scenes\Decision\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="PatrolAction.cpp">
+      <Filter>Scenes\Decision\Actions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -349,6 +352,9 @@
     </ClInclude>
     <ClInclude Include="..\src\TreeNode.h">
       <Filter>Scenes\Decision\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="PatrolAction.h">
+      <Filter>Scenes\Decision\Actions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
