@@ -57,7 +57,7 @@ private:
 	int m_pathNodeLOSDistance;
 
 	// Decision Tree
-	DecisionTree* decisionTree;
+	//DecisionTree* decisionTree;
 };
 
 #endif /* defined (__PLAY_SCENE__) */

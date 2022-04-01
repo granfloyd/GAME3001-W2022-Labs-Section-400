@@ -42,7 +42,7 @@ void PlayScene::update()
 		break;
 	}
 	// Make decision
-	decisionTree->MakeDecision();
+	//decisionTree->MakeDecision();
 }
 
 void PlayScene::clean()
@@ -114,9 +114,9 @@ void PlayScene::start()
 	m_toggleGrid(m_isGridEnabled);
 
 	// Create decision tree
-	decisionTree = new DecisionTree(m_pSpaceShip); // Overloaded constructor
-	decisionTree->Display(); // Optional
-	decisionTree->MakeDecision();
+	//decisionTree = new DecisionTree(m_pSpaceShip); // Overloaded constructor
+	//decisionTree->Display(); // Optional
+	//decisionTree->MakeDecision();
 
 	SoundManager::Instance().load("../Assets/audio/yay.ogg", "yay", SOUND_SFX);
 	SoundManager::Instance().load("../Assets/audio/thunder.ogg", "boom", SOUND_SFX);
