@@ -30,6 +30,31 @@ void DecisionTree::setAgent(Agent* agent)
 	m_agent = agent;
 }
 
+void DecisionTree::setLOSNode(LOSCondition* node)
+{
+	m_LOSNode = node;
+}
+
+void DecisionTree::setRadiusNode(RadiusCondition* node)
+{
+	m_RadiusNode = node;
+}
+
+void DecisionTree::setCloseCombatNode(CloseCombatCondition* node)
+{
+	m_CloseCombatNode = node;
+}
+
+void DecisionTree::setRangedCombatNode(RangedCombatCondition* node)
+{
+	m_RangedCombatNode = node;
+}
+
+std::vector<TreeNode*>& DecisionTree::getTree()
+{
+	return m_treeNodeList;
+}
+
 LOSCondition* DecisionTree::getLOSNode() const
 {
 	return m_LOSNode;
@@ -43,6 +68,11 @@ RadiusCondition* DecisionTree::getRadiusNode() const
 CloseCombatCondition* DecisionTree::getCloseCombatNode() const
 {
 	return m_CloseCombatNode;
+}
+
+RangedCombatCondition* DecisionTree::getRangedCombatNode() const
+{
+	return m_RangedCombatNode;
 }
 
 TreeNode* DecisionTree::AddNode(TreeNode* parent, TreeNode* child_node, const TreeNodeType type)

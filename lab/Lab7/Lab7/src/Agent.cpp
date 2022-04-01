@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "Util.h"
+#include "CollisionManager.h"
 
 Agent::Agent()
 {
@@ -157,7 +158,27 @@ void Agent::updateWhiskers(float a)
 
 bool Agent::chceckAgentLOSToTarget(Agent* agent, DisplayObject* target_object, std::vector<Obstacle*>& obstacles)
 {
-	return false;
+	bool hasLOS = false;
+
+	auto targetDirection = target_object->getTransform()->position - agent->getTransform()->position;
+	auto normalizedDirection = Util::normalize(targetDirection);
+	setMiddleLOSEndPoint(getTransform()->position + normalizedDirection * getLOSDistance());
+	// if ship to target distance is less than or equal to LOS Distance
+	auto AgentToTargetDistance = Util::getClosestEdge(agent->getTransform()->position, target_object);
+	if (AgentToTargetDistance <= agent->getLOSDistance())
+	{
+		std::vector<DisplayObject*> contactList;
+		for (auto obstacle :obstacles)
+		{
+			if (obstacle->getType() == NONE) continue; // Added Lab 7.
+			auto AgentToObjectDistance = Util::getClosestEdge(agent->getTransform()->position, obstacle);
+			if (AgentToObjectDistance > AgentToTargetDistance) continue;
+			contactList.push_back(obstacle);
+		}
+		hasLOS = CollisionManager::LOSCheck(agent,getMiddleLOSEndPoint(), contactList, target_object);
+		agent->setHasLOS(hasLOS);
+	}
+	return hasLOS;
 }
 
 void Agent::m_changeDirection()
