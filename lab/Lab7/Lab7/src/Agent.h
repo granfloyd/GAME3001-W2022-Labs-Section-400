@@ -6,7 +6,6 @@
 #include "NavigationObject.h"
 #include "ActionState.h"
 #include "Obstacle.h"
-#include"EventManager.h"
 
 class Agent : public NavigationObject
 {
@@ -52,14 +51,17 @@ public:
 	void updateWhiskers(float a);
 
 	void setActionState(ActionState a) { m_state = a; }
-	//new tree actions -- will be overridden  by derived Agents (e.g Closecombatenemy and the ranged combatenemy)
-	virtual void Attack(){}
+
+	// New Tree Actions
+	virtual void Attack() {}
 	virtual void MoveToLOS() {}
 	virtual void MoveToPlayer() {}
 	virtual void MoveToRange() {}
 	virtual void Patrol() {}
-	//new utility function for lab7pt2
-	bool chceckAgentLOSToTarget(Agent* agent, DisplayObject* target_object, std::vector<Obstacle*>& obstacles);
+
+	// New Utility for Lab 7 - part 2
+	bool checkAgentLOSToTarget(Agent* agent, DisplayObject* target_object, std::vector<Obstacle*>& obstacles);
+
 private:
 	void m_changeDirection();
 	float m_currentHeading; // angle the ship is looking

@@ -9,6 +9,7 @@
 #include "Renderer.h"
 #include "Util.h"
 
+
 PlayScene::PlayScene()
 {
 	PlayScene::start();
@@ -27,7 +28,8 @@ void PlayScene::draw()
 void PlayScene::update()
 {
 	updateDisplayList();
-	m_checkAgentLOS(m_pSpaceShip, m_pTarget);
+
+	m_pSpaceShip->getTree()->getLOSNode()->setLOS(m_pSpaceShip->checkAgentLOSToTarget(m_pSpaceShip, m_pTarget, m_pObstacles));
 	// Now for the path_nodes LOS
 	switch (m_LOSMode)
 	{
@@ -98,7 +100,8 @@ void PlayScene::start()
 	}
 	inFile.close();
 
-	m_pSpaceShip = new SpaceShip();
+	m_pSpaceShip = new CloseCombatEnemy();
+	//m_pSpaceShip = new RangedCombatEnemy();
 	m_pSpaceShip->getTransform()->position = glm::vec2(400.f, 40.f);
 	addChild(m_pSpaceShip, 3);
 
@@ -124,6 +127,13 @@ void PlayScene::start()
 	SoundManager::Instance().load("../Assets/audio/mutara.mp3", "mutara", SOUND_MUSIC);
 	SoundManager::Instance().setMusicVolume(16);
 	SoundManager::Instance().playMusic("mutara");
+
+	/*SoundManager::Instance().load("../Assets/audio/yay.ogg", "yay", SOUND_SFX);
+	SoundManager::Instance().load("../Assets/audio/thunder.ogg", "boom", SOUND_SFX);*/
+
+	/*SoundManager::Instance().load("../Assets/audio/mutara.mp3", "mutara", SOUND_MUSIC);
+	SoundManager::Instance().setMusicVolume(16);
+	SoundManager::Instance().playMusic("mutara");*/
 
 	ImGuiWindowFrame::Instance().setGUIFunction(std::bind(&PlayScene::GUI_Function, this));
 }

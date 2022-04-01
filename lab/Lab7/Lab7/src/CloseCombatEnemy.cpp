@@ -178,7 +178,7 @@ void CloseCombatEnemy::Patrol()
 		// Initialize the action
 		setActionState(PATROL);
 	}
-	//m_move();
+	m_move();
 }
 
 void CloseCombatEnemy::MoveToPlayer()
