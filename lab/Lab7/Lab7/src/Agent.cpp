@@ -155,6 +155,11 @@ void Agent::updateWhiskers(float a)
 	setRightLOSEndPoint(getTransform()->position + glm::vec2(x, -y) * getLOSDistance() * 0.75f);
 }
 
+bool Agent::chceckAgentLOSToTarget(Agent* agent, DisplayObject* target_object, std::vector<Obstacle*>& obstacles)
+{
+	return false;
+}
+
 void Agent::m_changeDirection()
 {
 	const auto x = cos(m_currentHeading * Util::Deg2Rad);
