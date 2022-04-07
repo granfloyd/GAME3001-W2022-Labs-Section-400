@@ -27,14 +27,7 @@ void PlayScene::draw()
 void PlayScene::update()
 {
 	updateDisplayList();
-	// Set agent tree conditions here. Eventually replace parameters with distance checks.
-	//m_pSpaceship->getTree()->getRadiusNode()->setIsWithinRadius(false);
-
-	//m_pSpaceShip->getTree()->getCloseCombatNode()->setIsWithinCombatRange(false);
-
-	//or...for ranged combat enemy
-	//m_pSpaceShip->getTree()->GetRangedCombatNode()->setIsWithinCombatRange(false);
-
+	
 	//m_pSpaceShip->getTree()->getLOSNode()
 		//->setLOS(m_pSpaceShip->checkAgentLOSToTarget(m_pSpaceShip, m_pTarget, m_pObstacles));
 	
@@ -75,6 +68,14 @@ void PlayScene::handleEvents()
 	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_2))
 	{
 		TheGame::Instance().changeSceneState(END_SCENE);
+	}
+	if (EventManager::Instance().keyPressed(SDL_SCANCODE_F))
+	{
+		//thing will fire here
+		m_pTorpedoes.push_back(new Torpedo(5.0f));
+		m_pTorpedoes.back()->getTransform()->position = m_pTarget->getTransform()->position;
+		//playsoundstuff here
+		addChild(m_pTorpedoes.back(), 2);
 	}
 }
 

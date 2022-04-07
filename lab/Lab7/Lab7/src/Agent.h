@@ -58,7 +58,9 @@ public:
 	virtual void MoveToPlayer() {}
 	virtual void MoveToRange() {}
 	virtual void Patrol() {}
-
+	virtual void Flee() {}
+	virtual void WaitBehindCover() {}
+	virtual void MoveToCover() {}
 	// New Utility for Lab 7 - part 2
 	bool checkAgentLOSToTarget(Agent* agent, DisplayObject* target_object, std::vector<Obstacle*>& obstacles);
 
@@ -86,6 +88,7 @@ private:
 
 	// action state
 	ActionState m_state;
+	int m_health = 100;
 };
 
 

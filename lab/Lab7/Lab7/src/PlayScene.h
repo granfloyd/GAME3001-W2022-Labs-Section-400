@@ -12,7 +12,7 @@
 #include "Background.h"
 #include "CloseCombatEnemy.h"
 #include "RangedCombatEnemy.h"
-
+#include "Torpedo.h"
 class PlayScene : public Scene
 {
 public:
@@ -45,6 +45,8 @@ private:
 
 	// PathNode Objects and Functions
 	std::vector<PathNode*> m_pGrid;
+	std::vector<Torpedo*> m_pTorpedoes;
+
 	void m_buildGrid();
 	void m_toggleGrid(bool state);
 	bool m_checkAgentLOS(Agent* agent, DisplayObject* target_object);
