@@ -156,10 +156,10 @@ void Agent::updateWhiskers(float a)
 	setRightLOSEndPoint(getTransform()->position + glm::vec2(x, -y) * getLOSDistance() * 0.75f);
 }
 
-bool Agent::checkAgentLOSToTarget(Agent * agent, DisplayObject * target_object, std::vector<Obstacle*>&obstacles)
+bool Agent::checkAgentLOSToTarget(Agent* agent, DisplayObject* target_object, std::vector<Obstacle*>& obstacles)
 {
 	bool hasLOS = false;
-
+	
 	auto targetDirection = target_object->getTransform()->position - agent->getTransform()->position;
 	auto normalizedDirection = Util::normalize(targetDirection);
 	setMiddleLOSEndPoint(getTransform()->position + normalizedDirection * getLOSDistance());
@@ -177,13 +177,12 @@ bool Agent::checkAgentLOSToTarget(Agent * agent, DisplayObject * target_object, 
 
 			contactList.push_back(obstacle);
 		}
-
+		
 		hasLOS = CollisionManager::LOSCheck(agent, getMiddleLOSEndPoint(), contactList, target_object);
 	}
 	agent->setHasLOS(hasLOS);
 	return hasLOS;
 }
-
 
 void Agent::m_changeDirection()
 {

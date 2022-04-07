@@ -5,12 +5,11 @@
 #include "Heuristic.h"
 #include "Scene.h"
 #include "Target.h"
-#include "SpaceShip.h"
+
 #include "PathNode.h"
 #include "Obstacle.h"
 // New Lab 7:
 #include "Background.h"
-#include "DecisionTree.h"
 #include "CloseCombatEnemy.h"
 #include "RangedCombatEnemy.h"
 
@@ -59,8 +58,6 @@ private:
 	int m_obstacleBuffer;
 	int m_pathNodeLOSDistance;
 
-	// Decision Tree
-	//DecisionTree* decisionTree;
 };
 
 #endif /* defined (__PLAY_SCENE__) */

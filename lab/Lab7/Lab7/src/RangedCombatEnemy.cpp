@@ -237,16 +237,9 @@ void RangedCombatEnemy::m_buildTree()
 	m_tree->AddNode(m_tree->getLOSNode(), m_tree->getRadiusNode(), LEFT_TREE_NODE);
 	m_tree->getTree().push_back(m_tree->getRadiusNode());
 
-	m_tree->setRangedCombatNode(new RangedCombatCondition());
-	m_tree->AddNode(m_tree->getLOSNode(), m_tree->getRangedCombatNode(), RIGHT_TREE_NODE);
-	m_tree->getTree().push_back(m_tree->getRangedCombatNode());
-
-
 	m_tree->setCloseCombatNode(new CloseCombatCondition());
 	m_tree->AddNode(m_tree->getLOSNode(), m_tree->getCloseCombatNode(), RIGHT_TREE_NODE);
 	m_tree->getTree().push_back(m_tree->getCloseCombatNode());
-
-
 
 	TreeNode* patrolNode = m_tree->AddNode(m_tree->getRadiusNode(), new PatrolAction(), LEFT_TREE_NODE);
 	dynamic_cast<ActionNode*>(patrolNode)->setAgent(this);

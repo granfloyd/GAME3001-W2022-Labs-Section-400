@@ -2,13 +2,12 @@
 #include "Game.h"
 #include "TextureManager.h"
 #include "Util.h"
-
 #include "AttackAction.h"
-#include "EventManager.h"
 #include "MoveToLOSAction.h"
 #include "MoveToPlayerAction.h"
 #include "PatrolAction.h"
 
+#include "EventManager.h"
 CloseCombatEnemy::CloseCombatEnemy()
 {
 	TextureManager::Instance().load("../Assets/textures/d7_small.png", "close_enemy");
@@ -35,23 +34,23 @@ CloseCombatEnemy::CloseCombatEnemy()
 	// Fill in action state and patrol code
 	setActionState(NO_ACTION);
 
-	// set patrol
-	m_patrol.push_back(glm::vec2(760, 40)); // Top Right
-	m_patrol.push_back(glm::vec2(760, 560)); // Bot Right
-	m_patrol.push_back(glm::vec2(40, 560)); // Bot Left
-	m_patrol.push_back(glm::vec2(40, 40)); // Top Left
+	m_patrol.push_back(glm::vec2(760, 40));
+	m_patrol.push_back(glm::vec2(760, 560));
+	m_patrol.push_back(glm::vec2(40, 560));
+	m_patrol.push_back(glm::vec2(40, 40));
 	m_waypoint = 0;
 
 	setTargetPosition(m_patrol[m_waypoint]);
+
 	setType(AGENT);
 
-	// Create Decision Tree
-	m_tree = new DecisionTree(this); // overloaded constructor
+	// Create decision tree
+	m_tree = new DecisionTree(this); // Overloaded constructor.
 	m_buildTree();
-	m_tree->Display();
+	m_tree->Display(); // Optional.
 }
 
-CloseCombatEnemy::~CloseCombatEnemy() 
+CloseCombatEnemy::~CloseCombatEnemy()
 = default;
 
 void CloseCombatEnemy::draw()
@@ -63,8 +62,8 @@ void CloseCombatEnemy::draw()
 	// draw the ship
 	TextureManager::Instance().draw("close_enemy", x, y, getCurrentHeading(), 255, isCentered());
 
-	// draw LOS only if imgui window is in debug
-	if(EventManager::Instance().isIMGUIActive())
+	// draw LOS
+	if (EventManager::Instance().isIMGUIActive())
 	{
 		Util::DrawLine(getTransform()->position, getMiddleLOSEndPoint(), getLOSColour());
 	}
@@ -123,13 +122,9 @@ void CloseCombatEnemy::setDesiredVelocity(const glm::vec2 target_position)
 void CloseCombatEnemy::Seek()
 {
 	// Find next waypoint:
-	if(Util::distance(m_patrol[m_waypoint], getTransform()->position) < 10)
+	if (Util::distance(m_patrol[m_waypoint], getTransform()->position) <= 10)
 	{
-		// if moved to last waypoint go back to the start
-		if(++m_waypoint == m_patrol.size())
-		{
-			m_waypoint = 0;
-		}
+		if (++m_waypoint == m_patrol.size()) m_waypoint = 0;
 		setTargetPosition(m_patrol[m_waypoint]);
 	}
 
@@ -173,9 +168,9 @@ void CloseCombatEnemy::LookWhereYoureGoing(const glm::vec2 target_direction)
 
 void CloseCombatEnemy::Patrol()
 {
-	if(getActionState() != PATROL)
+	if (getActionState() != PATROL)
 	{
-		// Initialize the action
+		// Initialize
 		setActionState(PATROL);
 	}
 	m_move();
@@ -185,15 +180,10 @@ void CloseCombatEnemy::MoveToPlayer()
 {
 	if (getActionState() != MOVE_TO_PLAYER)
 	{
-		// Initialize the action
+		// Initialize. Like set move target to player.
 		setActionState(MOVE_TO_PLAYER);
 	}
-	//m_move();
-}
-
-const DecisionTree* CloseCombatEnemy::getTree() const
-{
-	return m_tree;
+	// m_move();
 }
 
 void CloseCombatEnemy::m_move()
@@ -230,30 +220,31 @@ void CloseCombatEnemy::m_move()
 void CloseCombatEnemy::m_buildTree()
 {
 	// Create and add root node.
-	m_tree->setLOSNode(new LOSCondition());
-	m_tree->getTree().push_back(m_tree->getLOSNode());
+	m_tree->setPlayerDetectedNode(new PlayerDetectedCondition());
+	m_tree->getTree().push_back(m_tree->getPlayerDetectedNode());
 
-	m_tree->setRadiusNode(new RadiusCondition());
-	m_tree->AddNode(m_tree->getLOSNode(), m_tree->getRadiusNode(), LEFT_TREE_NODE);
-	m_tree->getTree().push_back(m_tree->getRadiusNode());
-
-	m_tree->setCloseCombatNode(new CloseCombatCondition());
-	m_tree->AddNode(m_tree->getLOSNode(), m_tree->getCloseCombatNode(), RIGHT_TREE_NODE);
-	m_tree->getTree().push_back(m_tree->getCloseCombatNode());
-
-	TreeNode* patrolNode = m_tree->AddNode(m_tree->getRadiusNode(), new PatrolAction(), LEFT_TREE_NODE);
-	dynamic_cast<ActionNode*>(patrolNode)->setAgent(this);
+	TreeNode* patrolNode = m_tree->AddNode(m_tree->getPlayerDetectedNode(), new PatrolAction(), LEFT_TREE_NODE);
+	patrolNode->setAgent(this);
 	m_tree->getTree().push_back(patrolNode);
 
-	TreeNode* moveToLOSNode = m_tree->AddNode(m_tree->getRadiusNode(), new MoveToLOSAction(), RIGHT_TREE_NODE);
-	dynamic_cast<ActionNode*>(moveToLOSNode)->setAgent(this);
+	LOSCondition* losNode = new LOSCondition();
+	m_tree->AddNode(m_tree->getPlayerDetectedNode(), losNode, RIGHT_TREE_NODE);
+	losNode->setAgent(this);
+	m_tree->getTree().push_back(losNode);
+	
+	TreeNode* moveToLOSNode = m_tree->AddNode(losNode, new MoveToLOSAction(), LEFT_TREE_NODE);
+	moveToLOSNode->setAgent(this);
 	m_tree->getTree().push_back(moveToLOSNode);
 
+	m_tree->setCloseCombatNode(new CloseCombatCondition());
+	m_tree->AddNode(losNode, m_tree->getCloseCombatNode(), RIGHT_TREE_NODE);
+	m_tree->getTree().push_back(m_tree->getCloseCombatNode());
+
 	TreeNode* moveToPlayerNode = m_tree->AddNode(m_tree->getCloseCombatNode(), new MoveToPlayerAction(), LEFT_TREE_NODE);
-	dynamic_cast<ActionNode*>(moveToPlayerNode)->setAgent(this);
+	moveToPlayerNode->setAgent(this);
 	m_tree->getTree().push_back(moveToPlayerNode);
 
 	TreeNode* attackNode = m_tree->AddNode(m_tree->getCloseCombatNode(), new AttackAction(), RIGHT_TREE_NODE);
-	dynamic_cast<ActionNode*>(attackNode)->setAgent(this);
+	attackNode->setAgent(this);
 	m_tree->getTree().push_back(attackNode);
 }

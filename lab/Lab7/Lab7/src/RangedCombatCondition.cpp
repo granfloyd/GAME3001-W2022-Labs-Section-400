@@ -2,20 +2,19 @@
 
 RangedCombatCondition::RangedCombatCondition(const bool within_combat_range)
 {
-	m_name = "Ranged Combat Condition";
-	setWithinCombatRange(within_combat_range);
+	setIsWithinCombatRange(within_combat_range);
+	m_name = "Ranged Combat Range Condition";
 }
 
 RangedCombatCondition::~RangedCombatCondition()
 = default;
 
-void RangedCombatCondition::setWithinCombatRange(const bool state)
+void RangedCombatCondition::setIsWithinCombatRange(const bool state)
 {
-	m_within_combat_range = state;
+	m_isWithinCombatRange = state;
 }
 
 bool RangedCombatCondition::Condition()
 {
-	return m_within_combat_range;
+	return m_isWithinCombatRange;
 }
-

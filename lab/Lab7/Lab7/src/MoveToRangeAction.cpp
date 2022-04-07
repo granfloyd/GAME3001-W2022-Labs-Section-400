@@ -1,10 +1,9 @@
 #include "MoveToRangeAction.h"
-
 #include <iostream>
 
 MoveToRangeAction::MoveToRangeAction()
 {
-	m_name = "Move to Range Action";
+	m_name = "Move To Range Action";
 }
 
 MoveToRangeAction::~MoveToRangeAction()
@@ -12,9 +11,7 @@ MoveToRangeAction::~MoveToRangeAction()
 
 void MoveToRangeAction::Action()
 {
-	if(getAgent()->getActionState() != MOVE_TO_RANGE)
-	{
+	if (getAgent()->getActionState() != MOVE_TO_RANGE)
 		std::cout << "Performing " << m_name << std::endl;
-	}
 	getAgent()->MoveToRange();
 }

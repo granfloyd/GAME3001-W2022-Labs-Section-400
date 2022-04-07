@@ -9,7 +9,6 @@
 #include "Renderer.h"
 #include "Util.h"
 
-
 PlayScene::PlayScene()
 {
 	PlayScene::start();
@@ -28,8 +27,17 @@ void PlayScene::draw()
 void PlayScene::update()
 {
 	updateDisplayList();
+	// Set agent tree conditions here. Eventually replace parameters with distance checks.
+	//m_pSpaceship->getTree()->getRadiusNode()->setIsWithinRadius(false);
 
-	m_pSpaceShip->getTree()->getLOSNode()->setLOS(m_pSpaceShip->checkAgentLOSToTarget(m_pSpaceShip, m_pTarget, m_pObstacles));
+	//m_pSpaceShip->getTree()->getCloseCombatNode()->setIsWithinCombatRange(false);
+
+	//or...for ranged combat enemy
+	//m_pSpaceShip->getTree()->GetRangedCombatNode()->setIsWithinCombatRange(false);
+
+	//m_pSpaceShip->getTree()->getLOSNode()
+		//->setLOS(m_pSpaceShip->checkAgentLOSToTarget(m_pSpaceShip, m_pTarget, m_pObstacles));
+	
 	// Now for the path_nodes LOS
 	switch (m_LOSMode)
 	{
@@ -43,8 +51,6 @@ void PlayScene::update()
 		m_checkAllNodesWithBoth();
 		break;
 	}
-	// Make decision
-	//decisionTree->MakeDecision();
 }
 
 void PlayScene::clean()
@@ -116,24 +122,15 @@ void PlayScene::start()
 	m_buildGrid();
 	m_toggleGrid(m_isGridEnabled);
 
-	// Create decision tree
-	//decisionTree = new DecisionTree(m_pSpaceShip); // Overloaded constructor
-	//decisionTree->Display(); // Optional
-	//decisionTree->MakeDecision();
-
 	SoundManager::Instance().load("../Assets/audio/yay.ogg", "yay", SOUND_SFX);
 	SoundManager::Instance().load("../Assets/audio/thunder.ogg", "boom", SOUND_SFX);
 
-	SoundManager::Instance().load("../Assets/audio/mutara.mp3", "mutara", SOUND_MUSIC);
-	SoundManager::Instance().setMusicVolume(16);
-	SoundManager::Instance().playMusic("mutara");
-
-	/*SoundManager::Instance().load("../Assets/audio/yay.ogg", "yay", SOUND_SFX);
-	SoundManager::Instance().load("../Assets/audio/thunder.ogg", "boom", SOUND_SFX);*/
-
 	/*SoundManager::Instance().load("../Assets/audio/mutara.mp3", "mutara", SOUND_MUSIC);
-	SoundManager::Instance().setMusicVolume(16);
 	SoundManager::Instance().playMusic("mutara");*/
+	SoundManager::Instance().load("../Assets/audio/klingon.mp3", "klingon", SOUND_MUSIC);
+	SoundManager::Instance().playMusic("klingon");
+	SoundManager::Instance().setMusicVolume(16);
+	
 
 	ImGuiWindowFrame::Instance().setGUIFunction(std::bind(&PlayScene::GUI_Function, this));
 }
