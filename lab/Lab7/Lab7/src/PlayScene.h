@@ -13,6 +13,7 @@
 #include "CloseCombatEnemy.h"
 #include "RangedCombatEnemy.h"
 #include "Torpedo.h"
+
 class PlayScene : public Scene
 {
 public:
@@ -39,14 +40,14 @@ private:
 	// Game Objects
 	Background* m_pBG;
 	Target* m_pTarget;
-	CloseCombatEnemy* m_pSpaceShip;
-	//RangedCombatEnemy* m_pSpaceShip;
+	//CloseCombatEnemy* m_pSpaceShip;
+	RangedCombatEnemy* m_pSpaceShip;
+
+	std::vector<Torpedo*> m_pTorpedoes;
 	std::vector<Obstacle*> m_pObstacles;
 
 	// PathNode Objects and Functions
 	std::vector<PathNode*> m_pGrid;
-	std::vector<Torpedo*> m_pTorpedoes;
-
 	void m_buildGrid();
 	void m_toggleGrid(bool state);
 	bool m_checkAgentLOS(Agent* agent, DisplayObject* target_object);

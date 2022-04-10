@@ -5,6 +5,8 @@
 #include <glm/vec4.hpp>
 #include "NavigationObject.h"
 #include "ActionState.h"
+// Added Lab 7b
+#include "EventManager.h"
 #include "Obstacle.h"
 
 class Agent : public NavigationObject
@@ -15,7 +17,7 @@ public:
 
 	// Inherited via GameObject
 	void draw() override = 0;
-	void update() override = 0;
+	void update() override;
 	void clean() override = 0;
 
 	// getters
@@ -32,6 +34,8 @@ public:
 	bool* getCollisionWhiskers(); // Returns entire array.
 	glm::vec4 getLineColor(int index);
 	float getWhiskerAngle() const;
+
+	int getHealth() const;
 
 	const ActionState getActionState() { return m_state; }
 
@@ -50,6 +54,9 @@ public:
 	void setWhiskerAngle(float a);
 	void updateWhiskers(float a);
 
+	void setHealth(int value);
+	void takeDamage(int value);
+
 	void setActionState(ActionState a) { m_state = a; }
 
 	// New Tree Actions
@@ -58,9 +65,11 @@ public:
 	virtual void MoveToPlayer() {}
 	virtual void MoveToRange() {}
 	virtual void Patrol() {}
+	// New Lab 7c
 	virtual void Flee() {}
 	virtual void WaitBehindCover() {}
 	virtual void MoveToCover() {}
+
 	// New Utility for Lab 7 - part 2
 	bool checkAgentLOSToTarget(Agent* agent, DisplayObject* target_object, std::vector<Obstacle*>& obstacles);
 
@@ -88,6 +97,8 @@ private:
 
 	// action state
 	ActionState m_state;
+
+	// New Lab 7c
 	int m_health = 100;
 };
 

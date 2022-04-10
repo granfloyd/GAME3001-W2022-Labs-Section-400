@@ -7,7 +7,6 @@
 #include "MoveToPlayerAction.h"
 #include "PatrolAction.h"
 
-#include "EventManager.h"
 CloseCombatEnemy::CloseCombatEnemy()
 {
 	TextureManager::Instance().load("../Assets/textures/d7_small.png", "close_enemy");
