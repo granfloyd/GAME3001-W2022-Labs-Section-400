@@ -1,0 +1,864 @@
+﻿  Agent.cpp
+  AttackAction.cpp
+  Background.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Background.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Background.cpp(11,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Background.cpp(25,55): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Background.cpp(25,27): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Button.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Button.cpp(24,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Button.cpp(25,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Button.cpp(40,45): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Button.cpp(40,42): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  CloseCombatCondition.cpp
+  CloseCombatEnemy.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CloseCombatEnemy.cpp(15,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CloseCombatEnemy.cpp(16,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CloseCombatEnemy.cpp(62,52): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CloseCombatEnemy.cpp(62,49): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  CollisionManager.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(9,28): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(9,21): warning C4244: 'initializing': conversion from 'T' to 'const int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(10,28): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(10,21): warning C4244: 'initializing': conversion from 'T' to 'const int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(20,72): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(20,24): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(53,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(53,22): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(54,43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(54,23): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(55,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(55,22): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(56,43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(56,23): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(108,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(108,22): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(109,43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(109,23): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(110,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(111,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(290,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(299,36): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(299,25): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(301,38): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(301,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(304,60): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(304,50): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(330,19): warning C4244: 'return': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(337,35): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(337,25): warning C4244: 'initializing': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(340,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(342,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(383,38): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(383,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(384,38): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(384,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(408,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(408,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(416,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\CollisionManager.cpp(416,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  DecisionTree.cpp
+  DisplayObject.cpp
+  EndScene.cpp
+  EnemyHealthCondition.cpp
+  EnemyHitCondition.cpp
+  EventManager.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\EventManager.cpp(164,32): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\EventManager.cpp(231,37): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\EventManager.cpp(232,37): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  FleeAction.cpp
+  FontManager.cpp
+  Game.cpp
+  GameController.cpp
+  GameObject.cpp
+  ImGuiWindowFrame.cpp
+  LOSCondition.cpp
+  Generating Code...
+  Compiling...
+  Label.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Label.cpp(15,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Label.cpp(16,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Label.cpp(30,51): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Label.cpp(30,48): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Label.cpp(52,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Label.cpp(53,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Label.cpp(71,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Label.cpp(72,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  MoveToCoverAction.cpp
+  MoveToLOSAction.cpp
+  MoveToPlayerAction.cpp
+  MoveToRangeAction.cpp
+  NavigationObject.cpp
+  Obstacle.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Obstacle.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Obstacle.cpp(11,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Obstacle.cpp(25,55): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Obstacle.cpp(25,27): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  PathNode.cpp
+  PatrolAction.cpp
+  Plane.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Plane.cpp(40,6): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Plane.cpp(40,3): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  PlayScene.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(131,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(132,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(228,58): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(229,58): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(232,60): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(233,60): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(237,41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(240,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(245,69): warning C4838: conversion from 'T' to 'int' requires a narrowing conversion
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(245,69): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(245,108): warning C4838: conversion from 'T' to 'int' requires a narrowing conversion
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(245,108): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(248,59): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(249,59): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(256,66): warning C4838: conversion from 'T' to 'int' requires a narrowing conversion
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(256,66): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(256,111): warning C4838: conversion from 'T' to 'int' requires a narrowing conversion
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(256,111): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(260,63): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\PlayScene.cpp(261,63): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Player.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Player.cpp(42,7): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Player.cpp(42,4): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Player.cpp(46,7): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Player.cpp(46,4): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Player.cpp(50,7): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Player.cpp(50,4): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Player.cpp(54,7): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Player.cpp(54,4): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  PlayerDetectedCondition.cpp
+  RadiusCondition.cpp
+  RangedCombatCondition.cpp
+  RangedCombatEnemy.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\RangedCombatEnemy.cpp(22,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\RangedCombatEnemy.cpp(23,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\RangedCombatEnemy.cpp(69,53): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\RangedCombatEnemy.cpp(69,50): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Renderer.cpp
+  Scene.cpp
+  SoundManager.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\SoundManager.cpp(146,27): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\SoundManager.cpp(146,20): warning C4244: 'initializing': conversion from '_Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\SoundManager.cpp(148,28): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\SoundManager.cpp(148,21): warning C4244: 'initializing': conversion from '_Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+  SpaceShip.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\SpaceShip.cpp(12,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\SpaceShip.cpp(13,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\SpaceShip.cpp(54,51): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\SpaceShip.cpp(54,48): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Generating Code...
+  Compiling...
+  Sprite.cpp
+  SpriteSheet.cpp
+  StartScene.cpp
+  Target.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Target.cpp(12,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Target.cpp(13,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Target.cpp(31,47): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Target.cpp(31,44): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  TextureManager.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(135,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(135,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(136,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(136,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(164,34): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(164,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(165,34): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(165,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(207,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(207,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(208,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(208,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(224,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(224,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(252,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(252,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(259,32): warning C4018: '>': signed/unsigned mismatch
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(287,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(287,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(288,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(288,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(317,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(317,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(318,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(318,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(337,11): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\TextureManager.cpp(338,11): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Tile.cpp
+  Torpedo.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Torpedo.cpp(42,7): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Torpedo.cpp(42,4): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  UIControl.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\UIControl.cpp(33,101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\UIControl.cpp(33,88): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Util.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(266,15): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(267,15): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(284,16): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(327,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(330,11): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(336,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(363,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(364,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(365,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(366,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(369,59): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(369,52): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(369,45): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(369,36): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(375,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(376,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(377,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(378,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(381,24): warning C4244: '=': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(382,24): warning C4244: '=': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(393,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(394,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(395,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(396,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(399,24): warning C4244: '=': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(400,24): warning C4244: '=': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(411,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(412,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(413,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(414,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(417,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(417,21): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(431,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(431,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(432,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(432,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(433,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(433,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(434,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(434,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(438,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(438,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(439,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(439,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(440,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(440,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(441,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(441,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(445,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(445,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(446,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(446,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(447,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(447,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(448,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(448,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(452,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(452,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(453,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(453,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(454,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(454,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(455,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(455,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(459,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(459,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(460,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(460,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(461,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(461,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(462,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(462,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(463,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(463,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(464,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(464,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(465,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(465,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(466,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(466,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(493,29): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(493,22): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(494,30): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(494,23): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(499,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(509,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\Util.cpp(518,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  WaitBehindCoverAction.cpp
+  main.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\main.cpp(9,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  ship.cpp
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\ship.cpp(12,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\ship.cpp(13,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\ship.cpp(40,45): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\ship.cpp(40,42): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\ship.cpp(129,35): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\src\ship.cpp(129,22): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+  Generating Code...
+  Template.vcxproj -> C:\Users\Michael\OneDrive\Desktop\gbc\game3001\Section-400\lab\Lab7\Lab7\bin\Debug\Template.exe
